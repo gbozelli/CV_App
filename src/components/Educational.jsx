@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import '/src/styles/Educational.css';
 
 function Educational() {
   const [school, setSchool] = useState("");
@@ -38,10 +39,15 @@ function Educational() {
       />
       <button onClick={closeDialog}>Save</button>
     </dialog>
+    <div className='Educational'>
+    
+    <div className='contentEducational'>
+      <div>School: {school}</div>
+      <div>Title: {title}</div>
+      <div>Date: {date}</div>
+    </div>
     <button onClick={openDialog}>Edit</button>
-    <div>{school}</div>
-    <div>{title}</div>
-    <div>{date}</div>
+    </div>
     </>
   )
 }

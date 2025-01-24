@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import '/src/styles/General.css';
 
 function General() {
   const [name, setName] = useState("");
@@ -38,10 +39,14 @@ function General() {
     />
     <button onClick={closeDialog}>Save</button>
   </dialog>
-  <button onClick={openDialog}>Edit</button>
-  <div>{name}</div>
-  <div>{email}</div>
-  <div>{phone}</div>
+  <div className='General'>
+    <div className='contentGeneral'>
+      <div>Name: {name}</div>
+      <div>Email: {email}</div>
+      <div>Phone: {phone}</div>
+    </div>
+    <button onClick={openDialog}>Edit</button>
+  </div>
   </>    
   )
 }
